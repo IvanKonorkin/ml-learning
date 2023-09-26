@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ml:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    command: python3 main.py
+    volumes:
+      - .:/app
+    container_name: ml
